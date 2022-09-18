@@ -1,1 +1,1 @@
-<html contenteditable></html>
+<!DOCTYPE html><html contenteditable id="content" onclick="edit();" style="padding: 1rem;"><body onload="loadContent();"><script>let content;function edit(){content.focus();}function loadContent(){content=document.getElementById("content"); text=localStorage.getItem('content');if(!text || !text.trim().length){text='note.harka.com';}content.addEventListener("input", function (){localStorage.setItem('content', content.innerText);}); content.innerText=text;}</script></html>
